@@ -47,4 +47,4 @@ jobs:
           push: true
           tags: |
             marlosek1/notes-frontend:v${{ github.run_number }}
-            marlosek1/notes-frontend:latest
+            marlosek1/notes-frontend:latest 
