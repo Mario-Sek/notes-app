@@ -37,8 +37,8 @@ jobs:
           context: ./notes-backend
           push: true
           tags: |
-            marlosek1/notes-backend:v${{ github.run_number }}
-            marlosek1/notes-backend:latest
+            mariosek1/notes-backend:v${{ github.run_number }}
+            mariosek1/notes-backend:latest
 
       - name: Build and push frontend
         uses: docker/build-push-action@v5
