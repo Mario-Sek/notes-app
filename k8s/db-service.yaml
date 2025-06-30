@@ -1,37 +1,11 @@
-apiVersion: apps/v1
-kind: StatefulSet
+apiVersion: v1
+kind: Service
 metadata:
-  name: postgres
+  name: db-service
   namespace: notes-app
 spec:
-  serviceName: db-service
-  replicas: 1
+  ports:
+    - port: 5432
+  clusterIP: None
   selector:
-    matchLabels:
-      app: postgres
-  template:
-    metadata:
-      labels:
-        app: postgres
-    spec:
-      containers:
-        - name: postgres
-          image: postgres:15
-          ports:
-            - containerPort: 5432
-          envFrom:
-            - configMapRef:
-                name: db-config
-            - secretRef:
-                name: db-secret
-          volumeMounts:
-            - name: postgres-storage
-              mountPath: /var/lib/postgresql/data
-  volumeClaimTemplates:
-    - metadata:
-        name: postgres-storage
-      spec:
-        accessModes: [ "ReadWriteOnce" ]
-        resources:
-          requests:
-            storage: 1Gi
+    app: postgres
