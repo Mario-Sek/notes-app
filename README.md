@@ -1,4 +1,4 @@
-## NotesApp – Full Stack DevOps Deployment
+# NotesApp – Full Stack DevOps Deployment
 
 This repository contains a full-stack, cloud-native Notes application deployed using a complete DevOps pipeline.
 
