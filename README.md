@@ -2,6 +2,9 @@
 
 This repository contains a full-stack, cloud-native Notes application deployed using a complete DevOps pipeline.
 
+You can find the full technical summary in the included `Documentation.pdf`.
+
+
 ---
 
 ## Technology Stack
